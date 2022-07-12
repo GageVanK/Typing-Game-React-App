@@ -2,9 +2,9 @@ import {createGlobalStyle} from "styled-components";
 
 export default createGlobalStyle`
 * {
-    margin: 0;
-    color: 333;
     box-sizing: border-box;
+    color: 333;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 

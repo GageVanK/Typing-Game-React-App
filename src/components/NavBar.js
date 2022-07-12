@@ -1,18 +1,18 @@
 import React from "react";
+import { StyledNavBar, StyledUL, StyledLink, StyledNavDiv } from "../styled-components/NavBar";
 import { Link } from "react-router-dom";
-
 function NavBar() {
     return (
-        <nav>
-            <div>
-                <Link to="/">Home</Link>
-            </div>
-            <ul>
-                <li><Link to="/game">Game</Link></li>
-                <li><Link to="/highScores">High Scores</Link></li>
-                <li><Link to="/gameOver">Game Over</Link></li>
-            </ul>
-        </nav>
+        <StyledNavBar>
+       
+            <StyledNavDiv>
+                <Link to="/">Gage's Typing React Game</Link>
+            </StyledNavDiv>
+            <StyledUL>
+                <li><StyledLink to="/game">Game</StyledLink></li>
+                <li><StyledLink to="/highScores">High Scores</StyledLink></li>
+            </StyledUL>
+        </StyledNavBar>
     );
 }
 

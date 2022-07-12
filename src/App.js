@@ -5,24 +5,28 @@ import HighScores from "./pages/HighScores";
 import GameOver from "./pages/GameOver";
 import NavBar from "./components/NavBar";
 import { Container } from "./styled-components/Container";
-import GlobalStyle from "./styled-components/Global";
+import Global from "./styled-components/Global";
+import { Main } from "./styled-components/Main";
 
 function App() {
   return (
     <BrowserRouter>
-      <GlobalStyle />
     
-      <NavBar />
-      
+      <Global />
+      <Main>
       <Container>
-      <Routes>
-        <Route path="/game" element={<Game />} />
-        <Route path="/highScores" element={<HighScores />} />
-        <Route path="/gameOver" element={<GameOver />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
+
+        <NavBar />
+        <Routes>
+          <Route path="/game" element={<Game />} />
+          <Route path="/highScores" element={<HighScores />} />
+          <Route path="/gameOver" element={<GameOver />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      
       </Container>
-    
+      </Main>
+
     </BrowserRouter>
   );
 }
